@@ -9,6 +9,7 @@ plumber = ->
     gutil.beep!
     gutil.log gutil.colors.red it.toString!
 livereload-server = require('tiny-lr')!
+livereload-port = 35729
 livereload = -> gulp-livereload livereload-server
 
 var http-server
@@ -79,6 +80,7 @@ gulp.task 'test:karma' (done) ->
 
 gulp.task 'dev' <[template assets js:vendor js:app css]> (done) ->
   gulp.start 'httpServer'
+  <- livereload-server.listen livereload-port
   gulp.watch ['app/**/*.jade'] <[template]>
   gulp.watch ['app/**/*.ls', 'app/**/*.jsenv'] <[js:app]>
   gulp.watch 'app/assets/**' <[assets]>
@@ -88,7 +90,6 @@ gulp.task 'dev' <[template assets js:vendor js:app css]> (done) ->
   }, ->
     done!
     process.exit!
-
 
 require! <[gulp-angular-templatecache gulp-jade]>
 gulp.task 'template' <[index]> ->
