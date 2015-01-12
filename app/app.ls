@@ -8,9 +8,13 @@ angular.module "App" <[app.templates ngMaterial ui.router]>
       url: '/about'
       templateUrl: 'app/partials/about.html'
       controller: "About"
+    .state 'main' do
+      url: '/main'
+      templateUrl: 'app/partials/main.html'
+      controller: "Main"
     # Catch all
   $urlRouterProvider
-    .otherwise('/about')
+    .otherwise('/main')
 
   # Without serve side support html5 must be disabled.
   $locationProvider.html5Mode true
@@ -35,3 +39,5 @@ angular.module "App" <[app.templates ngMaterial ui.router]>
 
 .controller About: <[$rootScope $http]> ++ ($rootScope, $http) ->
     $rootScope.activeTab = 'about'
+
+.controller Main: ->
