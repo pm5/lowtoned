@@ -1,19 +1,8 @@
-.main-content
-  md-content
-    md-list
-      md-item
-        md-item-content
-          .md-tile-content
-            h3 Coffee Shop
-      md-item
-        md-item-content
-          .md-tile-content
-            h3 Trees
-      md-item
-        md-item-content
-          .md-tile-content
-            h3 Wind
-      md-item
-        md-item-content
-          .md-tile-content
-            h3 Ground
+md-content.sound-list
+  md-card.sound-item(ng-repeat="sound in sounds" layout="row")
+    img.sound-face(src="{{sound.faceImageURL}}")
+    .sound-volume
+    md-cotent.sound-description(layout-padding)
+      h3 {{sound.description}}
+.sound-control(layout="row" layout-align="end center" layout-padding)
+  md-button.md-fab.md-accent(aria-label="Play") +
