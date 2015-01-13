@@ -1,8 +1,11 @@
-md-content.sound-list
-  md-card.sound-item(ng-repeat="sound in sounds" layout="row")
-    img.sound-face(src="{{sound.faceImageURL}}")
-    .sound-volume
-    md-cotent.sound-description(layout-padding)
-      h3 {{sound.description}}
+md-content.sound-list(layout="column")
+  md-list
+    md-item.sound-item(ng-repeat="sound in sounds")
+      md-item-content(layout)
+        img.sound-face(src="{{sound.faceImageURL}}")
+        .sound-volume
+        .md-tile-content.sound-description(layout-padding)
+          h3 {{sound.description}}
+      md-divider(ng-if="!$last")
 .sound-control(layout="row" layout-align="end center" layout-padding)
   md-button.md-fab.md-accent(aria-label="Play") +
