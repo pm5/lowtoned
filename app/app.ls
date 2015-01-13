@@ -2,7 +2,7 @@
 
 angular.module "App" <[app.templates ngMaterial ui.router]>
 
-.config <[$stateProvider $urlRouterProvider $locationProvider]> ++ ($stateProvider, $urlRouterProvider, $locationProvider) ->
+.config <[$stateProvider $urlRouterProvider $locationProvider $mdThemingProvider]> ++ ($stateProvider, $urlRouterProvider, $locationProvider, $mdThemingProvider) ->
   $stateProvider
     .state 'about' do
       url: '/about'
@@ -15,6 +15,10 @@ angular.module "App" <[app.templates ngMaterial ui.router]>
     # Catch all
   $urlRouterProvider
     .otherwise('/main')
+  $mdThemingProvider
+    .theme 'default'
+    .primaryColor 'indigo'
+    .accentColor 'pink'
 
   # Without serve side support html5 must be disabled.
   $locationProvider.html5Mode true

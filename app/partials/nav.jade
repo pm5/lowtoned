@@ -1,6 +1,4 @@
-material-toolbar.material-theme-light(scroll-shrink)
-  .material-toolbar-tools
-    h2
-      a.left.floated.item.header.brand(href='/') Lowtoned
-    h3.right.floated.menu
-      a.item.about(ng-href="/about", ng-class="{active:activeTab == 'about'}") 關於
+md-toolbar.md-primary(layout="row" md-scroll-shrink)
+  h2.md-toolbar-tools
+    a(ng-href="/about", ng-class="{active:activeTab == 'about'}") 關於
+  h2.md-toolbar-tools Low Toned
