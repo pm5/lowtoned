@@ -1,6 +1,6 @@
 md-content.sound-list(layout="column")
   md-list
-    md-item.sound-item(ng-repeat="sound in sounds")
+    md-item.sound-item(ng-repeat="sound in Sound.asList")
       md-item-content(layout)
         img.sound-face(src="{{sound.faceImageURL}}")
         .sound-volume
