@@ -1,4 +1,5 @@
-md-toolbar.md-primary(layout="row" md-scroll-shrink)
-  h2.md-toolbar-tools
-    a(ng-href="/about", ng-class="{active:activeTab == 'about'}") 關於
-  h2.md-toolbar-tools Low Toned
+md-toolbar.md-primary(md-scroll-shrink)
+  .md-toolbar-tools(layout="row" layout-align="space-around center" )
+    a(ng-href="/about" ng-class="{active:activeTab == 'about'}" flex="33") About
+    span(flex="33") Low Toned
+    span(flex="33")
