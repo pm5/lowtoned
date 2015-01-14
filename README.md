@@ -2,7 +2,7 @@
 Lowtoned
 ========
 
-Lowtoned hosts your ambient sound clips.  It borrows design from [Soundrown](http://soundrown.com/), with a few improvements:
+Lowtoned hosts your ambient sound clips.  It borrows design from [soundrown](http://soundrown.com/), with a few improvements:
 
 * It's responsive.
 * It's open source.
