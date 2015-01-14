@@ -6,6 +6,7 @@ Lowtoned hosts your ambient sound clips.  It borrows design from [Soundrown](htt
 
 * It's responsive.
 * It's open source.
+* It's mine.
 
 # License
 
