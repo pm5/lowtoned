@@ -6,11 +6,11 @@ angular.module "App" <[app.templates ngMaterial ui.router App.sound]>
   $stateProvider
     .state 'about' do
       url: '/about'
-      templateUrl: 'app/partials/about.html'
+      templateUrl: 'app/about/view.html'
       controller: "About"
     .state 'main' do
       url: '/main'
-      templateUrl: 'app/partials/main.html'
+      templateUrl: 'app/main/view.html'
       controller: "Main"
     # Catch all
   $urlRouterProvider
@@ -40,9 +40,3 @@ angular.module "App" <[app.templates ngMaterial ui.router App.sound]>
       'active'
     else
       ''
-
-.controller About: <[$rootScope $http]> ++ ($rootScope, $http) ->
-    $rootScope.activeTab = 'about'
-
-.controller Main: <[$scope Sound]> ++ ($scope, Sound) ->
-  $scope.Sound = Sound

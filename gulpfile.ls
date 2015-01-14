@@ -93,7 +93,7 @@ gulp.task 'dev' <[template assets js:vendor js:app css]> (done) ->
 
 require! <[gulp-angular-templatecache gulp-jade]>
 gulp.task 'template' <[index]> ->
-  gulp.src ['app/partials/**/*.jade']
+  gulp.src ['app/**/*.jade']
     .pipe gulp-if dev, plumber!
     .pipe gulp-jade!
     .pipe gulp-angular-templatecache 'app.templates.js' do
@@ -156,12 +156,12 @@ gulp.task 'css' <[bower]> ->
   bower = gulp.src main-bower-files!
     .pipe gulp-filter -> it.path is /\.css$/
 
-  styl = gulp.src './app/styles/**/*.styl'
+  styl = gulp.src './app/**/*.styl'
     .pipe gulp-filter -> it.path isnt /\/_[^/]+\.styl$/
     .pipe gulp-stylus use: [nib!]
 
   s = streamqueue { +objectMode }
-    .done bower, styl, gulp.src 'app/styles/**/*.css'
+    .done bower, styl, gulp.src 'app/**/*.css'
     .pipe gulp-concat 'app.css'
     .pipe gulp-if production, gulp-csso!
     .pipe gulp.dest './_public/css'

@@ -22,7 +22,7 @@ html(ng-app='App')
     script(src='/js/app.js')
   body(ng-controller="AppCtrl" ng-cloak layout="column" layout-fill)
     md-cotent
-      include partials/nav.jade
+      include nav.jade
       div(ui-view)
   - if (typeof(googleAnalytics) !== 'undefined')
     script.
