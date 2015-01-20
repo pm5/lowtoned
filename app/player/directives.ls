@@ -6,5 +6,5 @@ angular.module 'App.Player', []
   link: (scope, element) ->
     playing = false
     element.click ->
-      element.text if playing then '+' else '-'
       playing := not playing
+      element.html if playing then '<i class="icono-volumeHigh"></i>' else '<i class="icono-volumeMute"></i>'
