@@ -14,6 +14,7 @@ dependencies:
   "angular-scenario": angular-version
   "angular-material": "master"
   "angular-ui-router": "0.2.11"
+  "icono": "*"
 
 overrides:
   "angular":
