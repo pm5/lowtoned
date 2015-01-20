@@ -1,4 +1,4 @@
-angular.module 'App.sound' []
+angular.module 'App.Sound' []
 
 .service 'Sound' ->
   asList:
